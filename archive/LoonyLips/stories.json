@@ -1,0 +1,16 @@
+[{
+			"prompts": ["a name", "a name"],
+			"story": "story 1 %s %s"
+		},
+		{
+			"prompts": ["a name", "a name"],
+			"story": "story 2 %s %s"
+		},
+		{
+			"prompts": ["a name", "a name"],
+			"story": "story 3 %s %s"
+		},
+		{
+			"prompts": ["a name", "a name"],
+			"story": "story 4 %s %s"
+		}]
