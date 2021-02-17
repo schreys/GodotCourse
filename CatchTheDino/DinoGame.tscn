@@ -1,0 +1,211 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://DinoGame.gd" type="Script" id=1]
+[ext_resource path="res://Feltpen.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://dino.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 2 )
+
+[node name="DinoGame" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+editor/display_folded = true
+margin_right = 900.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 100 )
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_top = 26.0
+margin_right = 643.0
+margin_bottom = 74.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 1 )
+text = "Welcome to the dino game"
+align = 1
+valign = 1
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 647.0
+margin_right = 747.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+text = "Start"
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_left = 751.0
+margin_top = 26.0
+margin_right = 880.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 1 )
+text = "Points:"
+align = 1
+valign = 1
+
+[node name="Points" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_left = 884.0
+margin_top = 26.0
+margin_right = 900.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 1 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+editor/display_folded = true
+margin_top = 100.0
+margin_right = 900.0
+margin_bottom = 400.0
+size_flags_vertical = 3
+custom_constants/separation = -1
+
+[node name="0" type="CenterContainer" parent="VBoxContainer/HBoxContainer2"]
+margin_right = 300.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 300, 300 )
+
+[node name="Dino" type="TextureRect" parent="VBoxContainer/HBoxContainer2/0"]
+margin_right = 300.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 300, 300 )
+texture = ExtResource( 3 )
+expand = true
+
+[node name="1" type="CenterContainer" parent="VBoxContainer/HBoxContainer2"]
+editor/display_folded = true
+margin_left = 299.0
+margin_right = 599.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 300, 300 )
+
+[node name="Dino" type="TextureRect" parent="VBoxContainer/HBoxContainer2/1"]
+margin_right = 300.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 300, 300 )
+texture = ExtResource( 3 )
+expand = true
+
+[node name="2" type="CenterContainer" parent="VBoxContainer/HBoxContainer2"]
+editor/display_folded = true
+margin_left = 598.0
+margin_right = 898.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 300, 300 )
+
+[node name="Dino" type="TextureRect" parent="VBoxContainer/HBoxContainer2/2"]
+margin_right = 300.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 300, 300 )
+texture = ExtResource( 3 )
+expand = true
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+editor/display_folded = true
+margin_top = 400.0
+margin_right = 900.0
+margin_bottom = 700.0
+size_flags_vertical = 3
+custom_constants/separation = -1
+
+[node name="0" type="CenterContainer" parent="VBoxContainer/HBoxContainer3"]
+editor/display_folded = true
+margin_right = 300.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 300, 300 )
+
+[node name="Dino" type="TextureRect" parent="VBoxContainer/HBoxContainer3/0"]
+margin_right = 300.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 300, 300 )
+texture = ExtResource( 3 )
+expand = true
+
+[node name="1" type="CenterContainer" parent="VBoxContainer/HBoxContainer3"]
+editor/display_folded = true
+margin_left = 299.0
+margin_right = 599.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 300, 300 )
+
+[node name="Dino" type="TextureRect" parent="VBoxContainer/HBoxContainer3/1"]
+margin_right = 300.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 300, 300 )
+texture = ExtResource( 3 )
+expand = true
+
+[node name="2" type="CenterContainer" parent="VBoxContainer/HBoxContainer3"]
+editor/display_folded = true
+margin_left = 598.0
+margin_right = 898.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 300, 300 )
+
+[node name="Dino" type="TextureRect" parent="VBoxContainer/HBoxContainer3/2"]
+margin_right = 300.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 300, 300 )
+texture = ExtResource( 3 )
+expand = true
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
+editor/display_folded = true
+margin_top = 700.0
+margin_right = 900.0
+margin_bottom = 1000.0
+size_flags_vertical = 3
+custom_constants/separation = -1
+
+[node name="0" type="CenterContainer" parent="VBoxContainer/HBoxContainer4"]
+editor/display_folded = true
+margin_right = 300.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 300, 300 )
+
+[node name="Dino" type="TextureRect" parent="VBoxContainer/HBoxContainer4/0"]
+margin_right = 300.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 300, 300 )
+texture = ExtResource( 3 )
+expand = true
+
+[node name="1" type="CenterContainer" parent="VBoxContainer/HBoxContainer4"]
+editor/display_folded = true
+margin_left = 299.0
+margin_right = 599.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 300, 300 )
+
+[node name="Dino" type="TextureRect" parent="VBoxContainer/HBoxContainer4/1"]
+margin_right = 300.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 300, 300 )
+texture = ExtResource( 3 )
+expand = true
+
+[node name="2" type="CenterContainer" parent="VBoxContainer/HBoxContainer4"]
+editor/display_folded = true
+margin_left = 598.0
+margin_right = 898.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 300, 300 )
+
+[node name="Dino" type="TextureRect" parent="VBoxContainer/HBoxContainer4/2"]
+margin_right = 300.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 300, 300 )
+texture = ExtResource( 3 )
+expand = true
+
+[connection signal="resized" from="." to="." method="_on_DinoGame_resized"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Button" to="." method="_on_Button_pressed"]
