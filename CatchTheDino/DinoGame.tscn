@@ -206,6 +206,5 @@ margin_bottom = 300.0
 rect_min_size = Vector2( 300, 300 )
 texture = ExtResource( 3 )
 expand = true
-
 [connection signal="resized" from="." to="." method="_on_DinoGame_resized"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/Button" to="." method="_on_Button_pressed"]
