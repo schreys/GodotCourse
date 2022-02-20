@@ -11,6 +11,7 @@ signal animate
 func _physics_process(delta):
 	apply_gravity(delta)
 	jump()
+	interrump_jump()
 	move_horizontal()
 	animate()
 	motion = move_and_slide(motion, UP)
@@ -27,3 +28,7 @@ func apply_gravity(delta):
 	
 func animate():
 	emit_signal("animate", motion)
+	
+func interrump_jump():
+	if Input.is_action_just_released("jump") and motion.y < 0:
+		motion.y = 0
