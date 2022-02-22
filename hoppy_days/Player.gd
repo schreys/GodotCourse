@@ -1,10 +1,12 @@
 extends KinematicBody2D
 
-var motion = Vector2(0, 0)
 const SPEED = 1000
 const GRAVITY = 4000
 const JUMP_SPEED = 2000;
 const WORLD_LIMIT = 4000;
+
+var motion = Vector2(0, 0)
+var lives = 3
 
 signal animate
 
@@ -14,6 +16,7 @@ func _physics_process(delta):
 	interrump_jump()
 	move_horizontal()
 	animate()
+	game_over()
 	motion = move_and_slide(motion, Vector2.UP)
 
 func jump():
@@ -24,8 +27,6 @@ func move_horizontal():
 	motion.x = (Input.get_action_strength("right") - Input.get_action_strength("left"))*SPEED
 	
 func apply_gravity(delta):
-	if motion.y > WORLD_LIMIT: 
-		get_tree().change_scene("res://Levels/GameOver.tscn")
 	motion.y += GRAVITY * delta
 	
 func animate():
@@ -34,3 +35,11 @@ func animate():
 func interrump_jump():
 	if Input.is_action_just_released("jump") and motion.y < 0:
 		motion.y = 0
+		
+func hurt():
+	motion.y = -JUMP_SPEED
+	lives = lives - 1
+		
+func game_over():
+	if motion.y > WORLD_LIMIT or lives < 0:
+		get_tree().change_scene("res://Levels/GameOver.tscn")

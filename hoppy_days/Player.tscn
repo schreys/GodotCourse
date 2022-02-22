@@ -8,26 +8,28 @@
 [ext_resource path="res://GFX/Background/bg_layer4.png" type="Texture" id=6]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 61.3159
-height = 74.7417
+radius = 62.2396
+height = 66.5466
 
 [node name="Player" type="KinematicBody2D"]
-position = Vector2( 452, 237 )
-collision_mask = 2
-collision/safe_margin = 0.001
+position = Vector2( 114.776, 162.163 )
+collision_mask = 6
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -2, 2 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" parent="." instance=ExtResource( 2 )]
+animation = "idle"
+frame = 0
+playing = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 1000, 0 )
+scale = Vector2( 1e-005, 1e-005 )
 current = true
 zoom = Vector2( 3, 3 )
 drag_margin_h_enabled = false
