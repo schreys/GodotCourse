@@ -9,7 +9,7 @@ var motion = Vector2(0, 0)
 var lives = 3
 
 signal animate
-
+	
 func _physics_process(delta):
 	apply_gravity(delta)
 	jump()
@@ -21,8 +21,10 @@ func _physics_process(delta):
 
 func jump():
 	if(Input.is_action_pressed("jump") and is_on_floor()):
+		$jumpFX.play()
 		motion.y = -JUMP_SPEED
-
+		print(randf())
+	
 func move_horizontal():
 	motion.x = (Input.get_action_strength("right") - Input.get_action_strength("left"))*SPEED
 	
@@ -38,7 +40,8 @@ func interrump_jump():
 		
 func hurt():
 	motion.y = -JUMP_SPEED
-	lives = lives - 1
+	lives -= 1
+	$hurtFX.play()
 		
 func game_over():
 	if motion.y > WORLD_LIMIT or lives < 0:
