@@ -7,7 +7,7 @@
 [ext_resource path="res://GFX/Background/bg_layer3.png" type="Texture" id=5]
 [ext_resource path="res://GFX/Background/bg_layer4.png" type="Texture" id=6]
 [ext_resource path="res://SFX/pain.ogg" type="AudioStream" id=7]
-[ext_resource path="res://SFX/jump1.ogg" type="AudioStream" id=8]
+[ext_resource path="res://SFX/mario/smb_jump-small.wav" type="AudioStream" id=8]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 62.2396
@@ -26,7 +26,6 @@ shape = SubResource( 1 )
 
 [node name="AnimatedSprite" parent="." instance=ExtResource( 2 )]
 animation = "idle"
-frame = 0
 playing = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -34,6 +33,7 @@ position = Vector2( 1000, 0 )
 scale = Vector2( 1e-005, 1e-005 )
 current = true
 zoom = Vector2( 3, 3 )
+process_mode = 0
 drag_margin_h_enabled = false
 drag_margin_v_enabled = false
 smoothing_enabled = true
