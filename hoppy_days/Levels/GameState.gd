@@ -18,6 +18,9 @@ func hurt():
 func end_game():
 	get_tree().change_scene("res://Levels/GameOver.tscn")
 	
+func win_game():
+	get_tree().change_scene("res://Levels/Victory.tscn")
+	
 func update_gui():
 	get_tree().call_group("gui", "update_gui", lives, coins)
 	
